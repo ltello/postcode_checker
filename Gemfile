@@ -19,6 +19,7 @@ group :development, :test do
 end
 
 group :test do
+  gem 'capybara', '~> 3.32.0' # Feature testing
   gem 'shoulda-matchers', '~> 4.3.0' # Extra Rails matchers for rspec tests
 end
 group :development do

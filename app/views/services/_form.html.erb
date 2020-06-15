@@ -1,0 +1,5 @@
+<%= form_with url: check_services_path, method: :get do |f| %>
+  <%= f.label :postcode, "Postcode:" %>
+  <%= f.text_field :postcode, placeholder: "Type a postcode to check if it is servable", size: 40 %>
+  <%= f.submit "Check" %>
+<% end %>
