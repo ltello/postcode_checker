@@ -14,6 +14,7 @@ gem 'webpacker', '~> 4.0'    # Transpile app-like JavaScript. Read more: https:/
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw] # Debugger console
+  gem 'factory_bot_rails', '~> 5.1.1' # Factories to be used in tests
   gem 'rspec-rails', '~> 4.0.0' # Testing framework
 end
 
