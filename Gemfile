@@ -17,6 +17,9 @@ group :development, :test do
   gem 'rspec-rails', '~> 4.0.0' # Testing framework
 end
 
+group :test do
+  gem 'shoulda-matchers', '~> 4.3.0' # Extra Rails matchers for rspec tests
+end
 group :development do
   gem 'web-console', '>= 3.3.0' # interactive console on exception pages or calling 'console' anywhere in the code.
   gem 'listen', '~> 3.2'
