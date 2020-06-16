@@ -75,4 +75,5 @@ RSpec.configure do |config|
 
   # Make this modules available to tests
   config.extend WithModel
+  config.include FeatureHelpers
 end

@@ -15,12 +15,16 @@ class CheckPostcodeServable
     end
   end
 
+  def no_servable!
+    context.fail!(message: "Sorry, We don't serve postcode #{postcode}")
+  end
+
   def postcode_servable?
     servable if ServableLocation.with_postcode(postcode).exists?
   end
 
   def servable
-    context.message = "Success!. We serve postcode #{postcode}"
+    context.message = "Great, We serve postcode #{postcode}"
     true
   end
 end
