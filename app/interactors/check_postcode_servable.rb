@@ -10,6 +10,6 @@ class CheckPostcodeServable
   private
 
   def postcode_servable?
-    servable if ServableLocation.postcoded(postcode).exist?
+    servable if ServableLocation.with_postcode(postcode).exist?
   end
 end
