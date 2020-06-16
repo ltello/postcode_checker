@@ -7,13 +7,10 @@ require File.expand_path('../config/environment', __dir__)
 # Prevent database truncation if the environment is production
 abort("The Rails environment is running in production mode!") if Rails.env.production?
 
-require 'rspec/rails'
-RSpec.configure do |config|
-  config.expose_dsl_globally = true
-end
-
 # Add additional requires below this line. Rails is not loaded until this point!
 
+require 'rspec/rails'
+require 'with_model'
 require 'support/factory_bot'
 require 'capybara/rails'
 require 'capybara/rspec'
@@ -72,4 +69,10 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
+
+  # To get rid of RSpec. prefix in all files:
+  config.expose_dsl_globally = true
+
+  # Make this modules available to tests
+  config.extend WithModel
 end
