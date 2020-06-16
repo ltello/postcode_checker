@@ -9,6 +9,12 @@ class CheckPostcodeServable
 
   private
 
+  def lsoa_servable?
+    if location = Postcodes::IO.new.lookup(postcode)
+      servable if ServableArea.with_lsoa(location.lsoa).exists?
+    end
+  end
+
   def postcode_servable?
     servable if ServableLocation.with_postcode(postcode).exists?
   end
