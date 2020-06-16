@@ -40,3 +40,6 @@ yarn-debug.log*
 
 # Ignore gemset
 .ruby-gemset
+
+# Ignore testing output
+spec/examples.txt
