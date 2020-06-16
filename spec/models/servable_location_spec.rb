@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 describe ServableLocation do
   context "database columns" do
     it { is_expected.to have_db_column(:id).of_type(:integer).with_options(primary: true) }
-    it { is_expected.to have_db_column(:postcode).of_type(:string) .with_options(null: false) }
+    it { is_expected.to have_db_column(:postcode).of_type(:string).with_options(null: false) }
   end
 
   context "database indexes" do
@@ -73,7 +75,6 @@ describe ServableLocation do
   end
 
   context "instance methods" do
-
     context "#postcode=(value)" do
       let(:location) { build(:servable_location) }
 
@@ -99,4 +100,3 @@ describe ServableLocation do
     end
   end
 end
-

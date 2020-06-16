@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 describe ServicesController do
   describe "GET check" do
     context "when postcode param not provided" do

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CheckPostcodeServable
   include Interactor
 
@@ -10,9 +12,8 @@ class CheckPostcodeServable
   private
 
   def lsoa_servable?
-    if location = Postcodes::IO.new.lookup(postcode)
-      servable if ServableArea.with_lsoa(location.lsoa).exists?
-    end
+    location = Postcodes::IO.new.lookup(postcode)
+    servable if location && ServableArea.with_lsoa(location.lsoa).exists?
   end
 
   def no_servable!

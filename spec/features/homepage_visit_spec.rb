@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 feature "User visits homepage" do
   scenario "A form to check postcode service is displayed" do
     visit root_path

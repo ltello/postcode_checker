@@ -1,5 +1,6 @@
-class ServableArea < ApplicationRecord
+# frozen_string_literal: true
 
+class ServableArea < ApplicationRecord
   # Scopes
   scope :with_lsoa, ->(lsoa) { where(lsoa: lsoa) }
 

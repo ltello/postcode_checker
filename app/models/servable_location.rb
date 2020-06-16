@@ -1,5 +1,6 @@
-class ServableLocation < ApplicationRecord
+# frozen_string_literal: true
 
+class ServableLocation < ApplicationRecord
   # Scopes
   scope :with_postcode, ->(postcode) { where(postcode: UKPostcode.parse(postcode).to_s) }
 

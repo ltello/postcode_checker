@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 feature "User checks postcode" do
   scenario "Servable postcode" do
     postcode = "W4 2HN"

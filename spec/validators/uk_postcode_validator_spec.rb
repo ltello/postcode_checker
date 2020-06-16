@@ -1,7 +1,10 @@
+# frozen_string_literal: true
+
 describe UKPostcodeValidator, type: :model do
   with_model :MyProperty do
     model do
       attr_accessor :postcode
+
       validates :postcode, UK_postcode: true
     end
   end
@@ -10,13 +13,13 @@ describe UKPostcodeValidator, type: :model do
     "SE1 7QA",
     "SE1 7QD",
     "SE17QD"
-  ]
+  ].freeze
 
   INVALID_VALUES = [
     "SE1 7Q5",
     "SSSSSSS",
     "SE17 QD"
-  ]
+  ].freeze
 
   subject { MyProperty.new }
 

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateServableLocations < ActiveRecord::Migration[6.0]
   def change
     create_table :servable_locations do |t|

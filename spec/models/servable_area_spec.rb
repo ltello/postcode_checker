@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 describe ServableArea do
   context "database columns" do
     it { is_expected.to have_db_column(:id).of_type(:integer).with_options(primary: true) }
-    it { is_expected.to have_db_column(:lsoa).of_type(:string) .with_options(null: false) }
+    it { is_expected.to have_db_column(:lsoa).of_type(:string).with_options(null: false) }
   end
 
   context "database indexes" do

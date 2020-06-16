@@ -1,10 +1,11 @@
+# frozen_string_literal: true
+
 class ServicesController < ApplicationController
   def check
-    if check_params.present?
-      @check    = CheckPostcodeServable.call(check_params)
-      @message  = @check.message
-      @postcode = @check.postcode
-    end
+    return if check_params.blank?
+    @check    = CheckPostcodeServable.call(check_params)
+    @message  = @check.message
+    @postcode = @check.postcode
   end
 
   private

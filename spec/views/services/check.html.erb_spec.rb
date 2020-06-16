@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 describe "services/check" do
   before do
     assign(:postcode, "SE1 Q5A")
