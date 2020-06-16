@@ -3,7 +3,7 @@ class ServicesController < ApplicationController
   end
 
   def check
-    @check = CheckPostcodeServable.call(check_params[:postcode])
+    @check = CheckPostcodeServable.call(check_params)
   end
 
   private
