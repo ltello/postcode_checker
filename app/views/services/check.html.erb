@@ -1,2 +1,2 @@
-<%= render "form" %>
-<div id="check_result"><%= @check.message %></div>
+<%= render partial: "form", locals: { postcode: @postcode } %>
+<div id="check_message"><%= @message %></div>

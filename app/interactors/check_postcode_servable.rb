@@ -10,6 +10,11 @@ class CheckPostcodeServable
   private
 
   def postcode_servable?
-    servable if ServableLocation.with_postcode(postcode).exist?
+    servable if ServableLocation.with_postcode(postcode).exists?
+  end
+
+  def servable
+    context.message = "Success!. We serve postcode #{postcode}"
+    true
   end
 end
