@@ -1,16 +1,15 @@
 class ServicesController < ApplicationController
-  def index
-  end
-
   def check
-    @check    = CheckPostcodeServable.call(check_params)
-    @message  = @check.message
-    @postcode = @check.postcode
+    if check_params.present?
+      @check    = CheckPostcodeServable.call(check_params)
+      @message  = @check.message
+      @postcode = @check.postcode
+    end
   end
 
   private
 
   def check_params
-    params.permit(:postcode)
+    @check_params ||= params.permit(:postcode)
   end
 end

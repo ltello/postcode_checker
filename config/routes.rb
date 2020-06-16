@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  resources :services, only: %i[index] do
+  resources :services, only: %i[] do
     get :check, on: :collection
   end
 
-  root to: "services#index"
+  root to: "services#check"
 end

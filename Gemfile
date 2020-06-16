@@ -23,8 +23,9 @@ group :development, :test do
 end
 
 group :test do
-  gem 'capybara',         '~> 3.32.0' # System testing
-  gem 'shoulda-matchers', '~> 4.3.0'  # Extra Rails matchers for rspec tests
+  gem 'capybara',                 '~> 3.32.0' # System testing
+  gem 'rails-controller-testing', '~> 1.0'    # Bring assigns to tests
+  gem 'shoulda-matchers', '~> 4.3.0'          # Extra Rails matchers for rspec tests
 end
 group :development do
   gem 'web-console', '>= 3.3.0' # interactive console on exception pages or calling 'console' anywhere in the code.
