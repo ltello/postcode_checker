@@ -7,7 +7,7 @@ describe ServableArea do
   end
 
   context "database indexes" do
-    it { is_expected.to have_db_index(:lsoa) }
+    it { is_expected.to have_db_index(:lsoa).unique }
   end
 
   context "validations" do

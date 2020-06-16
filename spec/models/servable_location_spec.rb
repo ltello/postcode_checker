@@ -7,7 +7,7 @@ describe ServableLocation do
   end
 
   context "database indexes" do
-    it { is_expected.to have_db_index(:postcode) }
+    it { is_expected.to have_db_index(:postcode).unique }
   end
 
   context "validations" do

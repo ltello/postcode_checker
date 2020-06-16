@@ -3,7 +3,7 @@
 class CreateServableAreas < ActiveRecord::Migration[6.0]
   def change
     create_table :servable_areas do |t|
-      t.string :lsoa, null: false, index: true
+      t.string :lsoa, null: false, index: { unique: true }
 
       t.timestamps
     end

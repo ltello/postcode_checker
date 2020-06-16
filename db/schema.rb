@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -21,14 +19,14 @@ ActiveRecord::Schema.define(version: 2020_06_16_154503) do
     t.string "lsoa", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["lsoa"], name: "index_servable_areas_on_lsoa"
+    t.index ["lsoa"], name: "index_servable_areas_on_lsoa", unique: true
   end
 
   create_table "servable_locations", force: :cascade do |t|
     t.string "postcode", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["postcode"], name: "index_servable_locations_on_postcode"
+    t.index ["postcode"], name: "index_servable_locations_on_postcode", unique: true
   end
 
 end
