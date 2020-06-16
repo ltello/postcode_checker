@@ -10,10 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_16_102027) do
+ActiveRecord::Schema.define(version: 2020_06_16_154503) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "servable_areas", force: :cascade do |t|
+    t.string "lsoa", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["lsoa"], name: "index_servable_areas_on_lsoa"
+  end
 
   create_table "servable_locations", force: :cascade do |t|
     t.string "postcode", null: false
