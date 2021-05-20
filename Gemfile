@@ -11,7 +11,7 @@ gem 'bootsnap',     '>= 1.4.2', require: false # Reduces boot times through cach
 gem 'interactor',   '~> 3.0'                   # Service Objects base
 gem 'pg',           '>= 0.18', '< 2.0'         # Use postgresql as the database for Active Record
 gem 'postcodes_io', '~> 0.3'                   # UK postcodes API client.
-gem 'puma',         '~> 4.1'                   # Use Puma as the app server
+gem 'puma',         '~> 4.3'                   # Use Puma as the app server
 gem 'turbolinks',   '~> 5'                     # Turbolinks makes navigating your web application faster.
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby] # zoneinfo files for Windows
 gem 'uk_postcode',  '~> 2.1'                   # UK postcode parser
